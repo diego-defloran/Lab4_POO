@@ -16,8 +16,7 @@ public class Controlador {
 		opcion = vista.Opcion();
 	
 		if (opcion == 1) {
-			String a = vista.IngresoString();
-			System.out.println(a);
+			
 		}
 		
 		else if (opcion == 2) {

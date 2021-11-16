@@ -5,7 +5,8 @@ public class Vista {
 	Scanner scan = new Scanner(System.in);
 	String mensaje;
 	int opcion;
-	String a;
+	String s;
+	float e;
 	
 	public void MensajeBienvenida() {
 		this.mensaje = "  |----------------------------------------------------------------|\r\n"
@@ -51,9 +52,14 @@ public class Vista {
 	}
 	
 	public String IngresoString() {
-		a = scan.nextLine();
-		return this.a;
-		
+		s = scan.nextLine();
+		return this.s;
 	}
 	
+	public float IngresoFloat() {
+		e = scan.nextFloat();
+		return this.e;
+	}
+	
+	//public void Mostrardatos(s)
 	}

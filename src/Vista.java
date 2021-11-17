@@ -50,7 +50,10 @@ public class Vista {
 	public void Menu() {
 		System.out.println(" Que desea realizar?\n" + "1. Encender Radio\n"+"2. Apagar Radio\n" + "3. Salir");
 	}
-	
+	public int opcion(){
+		int num = scan.nextInt();
+		return num;
+	}
 	public String IngresoString() {
 		s = scan.nextLine();
 		return this.s;

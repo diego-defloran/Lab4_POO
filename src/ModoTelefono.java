@@ -23,7 +23,7 @@ public class ModoTelefono {
     ArrayList<ArrayList<String>> Contactos = new ArrayList<>(Arrays.asList(Kevin, FreddyMercury, WalterWhite, Cazafantasmas, Gordon));
     boolean conectado = false;
     boolean enLlamada = false;
-    String UltimoContacto = "";
+    String UltimoContacto = "Kevin Lopez";
     Scanner scanner = new Scanner(System.in);
     
     public void Conectar_Desconectar(){
@@ -99,13 +99,30 @@ public class ModoTelefono {
         System.out.println("\nLlamada finalizada exitosamente.");
     }
     
-    public void MostrarMetodos(){
+    public void MostrarMetodos(String Modelo){
+        
         
         System.out.println("\nMODO TELEFONO:\n");
         System.out.println("1. Conectar/Desconectar telefono.\n ");
         System.out.println("2. Mostrar Contactos\n ");
         System.out.println("3. Llamar contacto.\n ");
         System.out.println("4. Finalizar llamada.\n ");
+        if (Modelo.equals("A")){
+            System.out.println("5. Llamar ultimo contacto\n ");
+        ;
+
+        }
+        else if (Modelo.equals("S")){
+            System.out.println("5. Cambiar Bocina a aericulares (Y viceversa)\n ");
+            
+
+        }
+
+        
+        else if (Modelo.equals("C")){
+            System.out.println("5. Llamada en espera\n ");
+           
+        }
         
     }
     

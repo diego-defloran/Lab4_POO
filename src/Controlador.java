@@ -25,11 +25,42 @@ public class Controlador {
 			int modo = vista.opcion();
 			
 			if (modo == 1){
-
+				System.out.println("\nMODO RADIO ACTIVADO");
+				radio.modoRadio.MostrarMetodos();
+				int eleccion = vista.opcion();
+				if (eleccion == 1) {
+					System.out.println("Emisora anterior: " + radio.modoRadio.getEmisora() + " Hz " + radio.modoRadio.getFrecuencia());
+					radio.modoRadio.cambiarEmisora();
+					System.out.println("Nueva emisora: " + radio.modoRadio.getEmisora() + " Hz " + radio.modoRadio.getFrecuencia());
+				}
+				else if (eleccion == 2) {
+					radio.modoRadio.GuardarEmisora();
+					
+				}
+				
+				else if(eleccion ==3) {
+					radio.modoRadio.CargarEmisora();
+				}
+				
 			}
 
 			else if (modo == 2){
-
+				System.out.println("\nMODO REPRODUCCION ACTIVADO");
+				radio.modoReproduccion.MostrarMetodos();
+				int eleccion = vista.opcion();
+				if (eleccion ==1) {
+					System.out.println("PlayList: " + radio.modoReproduccion.getNombre());
+					System.out.println("Cancion / Artista");
+					radio.modoReproduccion.getPlayList();
+				}
+				else if(eleccion ==2) {
+					radio.modoReproduccion.CambiarCancion();
+				}
+				else if(eleccion ==3) {
+					radio.modoReproduccion.EscucharCancion();
+					
+				}
+				
 			}
 
 			else if (modo ==3){
@@ -67,7 +98,7 @@ public class Controlador {
 	}
 	
 		else if (opcion == 2) {
-			
+			System.out.println("RADIO APAGADA! Ya no podrá escuchar buen requesón...");
 		}
 		
 		else if (opcion == 3) {

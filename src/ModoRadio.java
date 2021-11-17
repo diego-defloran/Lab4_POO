@@ -4,6 +4,7 @@ public class ModoRadio {
 	private String Frecuencia = "FM";
 	private ArrayList<Double> EmisorasGuardadas = new ArrayList<>();
 	private double Emisora; 
+	
 	public String getFrecuencia() {
 		return this.Frecuencia;
 		
@@ -41,8 +42,24 @@ public class ModoRadio {
 		for (int e = 0; EmisorasGuardadas.size() > e; e++) {
 			System.out.println(EmisorasGuardadas.get(e));
 		}
-		
-		
+		Vista vista = new Vista();
+		System.out.println("Ingrese la posicion de la lista con la emisora que desea reproducir, iniciando desde 0.\n");
+		int eleccion = vista.opcion();
+		System.out.println("Ha seleccionado: " + EmisorasGuardadas.get(eleccion));
+		if (eleccion > EmisorasGuardadas.size()) {
+			System.out.println("Ingrese una opcion valida!");
+			CargarEmisora();
+		}
 	}
-
+		
+	    public void MostrarMetodos(){
+	        
+	        System.out.println("\nMODO RADIO:\n");
+	        System.out.println("1. Cambiar frecuencia\n ");
+	        System.out.println("2. Guardar Emisora.\n ");
+	        System.out.println("3. Cargar Emisora.\n ");
+	        
+	    }
+		
 }
+

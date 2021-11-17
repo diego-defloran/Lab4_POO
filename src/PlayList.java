@@ -27,8 +27,11 @@ public class PlayList {
 	}
 	
 	public void MostrarCanciones() {
-		for (int e = 0; Canciones1.size() >0; e++) {
+		for (int e = 0; Canciones1.size() > 0; e++) {
 			System.out.println(Canciones1.get(e));
+			if(e == 10) {
+				break;
+			}
 		}
 	}
 }

@@ -2,8 +2,8 @@
 public class Radio {
 	protected boolean encendido = false;
 	protected int volumen;
-	//protected ModoRadio modoRadio;
-	//protected ModoReproduccion modoReproduccion;
+	protected ModoRadio modoRadio = new ModoRadio();
+	protected ModoReproduccion modoReproduccion = new ModoReproduccion();
 	public ModoTelefono mt = new ModoTelefono();
 	
 	public boolean getEncendido() {

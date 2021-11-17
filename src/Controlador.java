@@ -128,7 +128,7 @@ public class Controlador {
 				System.out.println("\nMODO PRODUCTIVIDAD ACTIVADO");
 				int eleccion;
 				if (Modelo.equals("A")){
-					System.out.print("\nModo A, presiona 1 para ver la tarjeta de presentacion");
+					System.out.print("\nModo A, presiona 1 para ver la tarjeta de presentacion\n");
 					eleccion = vista.opcion();
 					A a = new A();
 					
@@ -136,7 +136,7 @@ public class Controlador {
 				}
 
 				else if (Modelo.equals("S")){
-					System.out.print("\nModo s, presiona 1 para planificar vacaciones");
+					System.out.print("\nModo s, presiona 1 para planificar vacaciones\n");
 					 eleccion = vista.opcion();
 					S s = new S();
 					
@@ -144,7 +144,7 @@ public class Controlador {
 				}
 
 				else if (Modelo.equals("C")){
-					System.out.print("\nModo C, presiona 1 para ver la prediccion del clima");
+					System.out.print("\nModo C, presiona 1 para ver la prediccion del clima\n");
 					eleccion = vista.opcion();
 					C c = new C();
 					c.PronosticoClima();

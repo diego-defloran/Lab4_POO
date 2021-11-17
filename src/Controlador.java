@@ -28,7 +28,7 @@ public class Controlador {
 		
 		
 		
-			System.out.println("\nElija el modo a activar.\n 1.Modo Radio. \n 2.Modo Reproduccion. \n 3.Modo Telefono \n 4. Modo Productividad");
+			System.out.println("\nElija el modo a activar.\n 1.Modo Radio. \n 2.Modo Reproduccion. \n 3.Modo Telefono \n 4. Modo Productividad\n 5. Salir");
 			int modo = vista.opcion();
 			
 			if (modo == 1){
@@ -150,6 +150,11 @@ public class Controlador {
 					c.PronosticoClima();
 				}
 
+			}
+			
+			else if (modo == 5) {
+				System.out.println("Gracias por utilizar el Simulador Virtual de Radios de MERCEDES-BENZ");
+				System.exit(0);
 			}
 
 			else {

@@ -28,7 +28,7 @@ public class Controlador {
 		
 		
 		
-			System.out.println("\nElija el modo a activar.\n 1.Modo Radio. \n 2.Modo Reproduccion. \n 3.Modo Telefono \n 4. Modo Productividad\n 5. Salir");
+			System.out.println("\nElija el modo a activar.\n 1. Modo Radio. \n 2. Modo Reproduccion. \n 3. Modo Telefono \n 4. Modo Productividad\n 5. Salir");
 			int modo = vista.opcion();
 			
 			if (modo == 1){

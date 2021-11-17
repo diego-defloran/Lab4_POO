@@ -1,10 +1,10 @@
 
-public abstract class Radio {
+public class Radio {
 	protected boolean encendido = false;
 	protected int volumen;
-	protected ModoRadio modoRadio = new ModoRadio();
-	protected ModoReproduccion modoReproduccion = new ModoReproduccion();
-	
+	//protected ModoRadio modoRadio;
+	//protected ModoReproduccion modoReproduccion;
+	public ModoTelefono mt = new ModoTelefono();
 	
 	public boolean getEncendido() {
 		return encendido;

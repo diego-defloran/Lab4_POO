@@ -19,6 +19,8 @@ public class Controlador {
 			System.out.println("\nElija la clase de modelo (A, S, C):");
 			String error = vista.IngresoString();
 			Modelo = vista.IngresoString();
+			
+			
 
 		while (opcion == 1 ){
 			
@@ -26,12 +28,22 @@ public class Controlador {
 		
 		
 		
-			System.out.println("\nElija el modo a activar.\n1.Modo Radio. \n2.Modo Reproduccion. \n3.Modo Telefono \n4. Modo Productividad");
+			System.out.println("\nElija el modo a activar.\n 1.Modo Radio. \n 2.Modo Reproduccion. \n 3.Modo Telefono \n 4. Modo Productividad");
 			int modo = vista.opcion();
 			
 			if (modo == 1){
 				System.out.println("\nMODO RADIO ACTIVADO");
-				radio.modoRadio.MostrarMetodos();
+				System.out.println("Volumen actual: " + radio.getVolumen());
+				System.out.println("Desea cambiar el volumen?\n 1. Sí\n 2. No");
+				int vol = vista.opcion();
+				if (vol == 1) {
+					radio.setVolumen();
+					System.out.println(radio.getVolumen());
+					radio.modoRadio.MostrarMetodos();
+				}
+				else if (vol ==2) {
+					radio.modoRadio.MostrarMetodos();
+				}
 				int eleccion = vista.opcion();
 				if (eleccion == 1) {
 					System.out.println("Emisora anterior: " + radio.modoRadio.getEmisora() + " Hz " + radio.modoRadio.getFrecuencia());
@@ -59,6 +71,7 @@ public class Controlador {
 					radio.modoReproduccion.getPlayList();
 				}
 				else if(eleccion ==2) {
+					System.out.println(radio.modoReproduccion.getNombre());
 					radio.modoReproduccion.CambiarCancion();
 				}
 				else if(eleccion ==3) {

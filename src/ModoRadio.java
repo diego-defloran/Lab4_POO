@@ -45,7 +45,7 @@ public class ModoRadio {
 		Vista vista = new Vista();
 		System.out.println("Ingrese la posicion de la lista con la emisora que desea reproducir, iniciando desde 0.\n");
 		int eleccion = vista.opcion();
-		System.out.println("Ha seleccionado: " + EmisorasGuardadas.get(eleccion));
+		System.out.println("Ha seleccionado: " + EmisorasGuardadas.get(eleccion) + "en posicion: " + EmisorasGuardadas.indexOf(eleccion));
 		if (eleccion > EmisorasGuardadas.size()) {
 			System.out.println("Ingrese una opcion valida!");
 			CargarEmisora();
